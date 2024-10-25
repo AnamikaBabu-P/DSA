@@ -1,7 +1,6 @@
 
 ///////////////////---------------Singly Linked list-------------------/////////////
 
-
 // class Node{
 //     constructor(value){
 //         this.value = value
@@ -61,7 +60,6 @@
 //         if(index < 0 || index > this.size){
 //             return
 //         }
-
 //         if(index === 0){
 //             this.prepend(value)
 //         }else{
@@ -74,7 +72,6 @@
 //             curr.next = node 
 //            this.size++;
 //         }
-
 //     }
 
 //     //-----------------insert after----------------------//
@@ -90,7 +87,6 @@
 //           curr.next = node
 //           this.size++;
 //         }
-        
 //      }
 
 //      //------------------insert before-------------------//
@@ -101,7 +97,6 @@
 //       while(curr.next && curr.next.value !== x){
 //         curr = curr.next
 //       }
-
 //       if(curr.next){
 //         node.next = curr.next 
 //         curr.next = node
@@ -148,7 +143,6 @@
 //             let prev = this.head
 //             while(prev.next && prev.next.value !== value){
 //                 prev = prev.next
-                
 //             }
 //             if(prev.next ){
 //                 prev.next = prev.next.next
@@ -438,8 +432,7 @@
 //       this.head.prev = node
 //       this.head = node
 //       this.size++;
-//     }
-    
+//     } 
 //   }
 
 //   //---------------------------append------------------------//
@@ -450,7 +443,7 @@
 //     if(!this.head){
 //       this.head = node
 //       this.size++;
-//     }else{
+//      }else{
 //       let curr =this.head
 //       while(curr.next){
 //         curr = curr.next
@@ -866,7 +859,7 @@
 //   if(n<2){
 //     return n
 //   }
-//   return n=  recursiveFibonacci(n-1)+ recursiveFibonacci(n-2)
+//   return n = recursiveFibonacci(n-1) + recursiveFibonacci(n-2)
 // }
 
 // console.log(recursiveFibonacci(6));
@@ -954,7 +947,7 @@
 //---------------------Recursive Iseven Check---------------------------//
 
 // function isEven(number){
-//     if(number<0){
+//     if(number < 0){
 //         number = Math.abs(number)
 //     }
 
@@ -973,7 +966,7 @@
 //-----------------------Recursive check Palindrome-------------------//
 
 // function Palindrome(word){
-//     if(typeof(word)!== 'string'){
+//     if(typeof(word) !== 'string'){
 //         return 'The word should not be empty'
 //     }
 //     if(word.length<=1){
@@ -1037,3 +1030,30 @@
 // console.log(binarySearch([1,2,3,4],3));
 
 
+///////////////////---------------SET -----------------/////////////
+
+
+// const set = new Set([1,2,3])
+// set.add(4)
+// console.log(set.has(4))
+// set.delete(3)
+// console.log(set.size)
+// set.clear()
+
+// for(const item of set){
+//     console.log(item)
+// }
+
+/////////////////////-------------MAP --------------////////////////
+
+// const map = new Map([['a',1],['b',2]])
+// map.set('c',3)
+// console.log(map.has('a'));
+// map.delete('c')
+// console.log(map.size);
+// map.clear()
+
+
+// for(const [key,value] of map){
+//     console.log(`${key}:${value}`)
+// }

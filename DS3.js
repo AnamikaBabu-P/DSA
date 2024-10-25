@@ -65,7 +65,6 @@
 //         }
 //         return null
 //     }
-
 //     print(){
 //         console.log(this.root);
 //     }
@@ -351,7 +350,7 @@
 //         return true
 //     }
 
-//     if(root.value <=min || root.value >= max){
+//     if(root.value <= min || root.value >= max){
 //         return false
 //     }
 
@@ -670,16 +669,12 @@
 //         array.forEach(value => {
 //             this.insert(value)
 //         });
-
 //         let sorted = []
 //         while(this.heap.length>0){
 //             sorted.push(this.removeMax())
 //         }
 //         return sorted
-//     }
-
-    
-    
+//     }   
 // }
 
 // const maxH = new MaxHeap()

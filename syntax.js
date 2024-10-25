@@ -3,6 +3,7 @@
 //show dbs---->
 //db.dropDatabase()
 //db.createCollection('user')
+//db.creacteCollection('user',capped: true,size: 1048576 ) //fixed collecition with 1 mb
 //show collections
 //db.user.insertOne({Name:"Anamika",Place:"Malappuram",Age:20})
 //db.user.insertMany([{},{}])
@@ -40,7 +41,9 @@
 //db.users.updateOne({_id: ObjectId('659f5c8ac6801899e8e01985')},{$rename:{name:"Firstname"}})------->(Changes the name property into firstname)
 //db.users.updateOne({_id: ObjectId('659f5c8ac6801899e8e01985')},{$unset:{age:""}})----->(delete the property age)
 //db.users.updateOne({_id: ObjectId('659f5c8ac6801899e8e01985')},{$push:{hobbies:"Swimming"}})------->(push element into array in the object)
-//db.users.updateOne({_id: ObjectId('659f5c8ac6801899e8e01985')},{$pull:{hobbies:"Bowling"}})------>(Take out element from an array)
+//db.users.updateOne({_id: ObjectId('659f5c8ac6801899e8e01985')},{$pull:{hobbies:"Bowling"}})------>(Removes one specified value)
+//db.users.updateOne({_id: ObjectId('659f5c8ac6801899e8e01985')},{$pullAll:{hobbies:["Bowling","Swimming"]}})--->(Removes multiple specified values)
+//db.users.updateOne({_id: ObjectId('659f5c8ac6801899e8e01985')},{$addToSet:{hobbies:"Dancing"}})------>(adds a value to an array only if it doesn't already exist in the array. It ensures there are no duplicate values in the array.)
 //db.users.updateMany({address:{$exists:true}},{$unset:{address:""}})------>(find the objects with address and remove the address from that)
 //db.users.replaceOne({age:41},{name:"John",age:30,place:"New York"})------>(It replace the entire content of the object with age 41 to the new details on the second curly bracket)
 //db.users.deleteOne({name:"John"})----->(deletes that one user)
@@ -51,6 +54,7 @@
 //db.users.find().foreach
 //db.users.find({ name: { $type: "string" } });----->(Type operator use to specify the type of the value)
 //db.users.find({ scores: { $elemMatch: { type: "exam", score: { $gt: 90 } } } });
+
 //db.users.aggregate([{$match:{isActive:true}}])----->It makes the document with matches with isActive:true.
 //db.users.aggregate([{$match:{tags:{$size:3}}}])----->(It give the document with tags array having 3 elements)
 //db.users.aggregate([{$group:{_id:"$age"}}])----->(_id is Mandatory field.it give the document with distinct values of age of the input document.)
